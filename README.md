@@ -17,10 +17,6 @@ https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5ca
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI collaboration](#ai-collaboration)
-- [Author](#author)
 
 ---
 
@@ -81,10 +77,4 @@ During this project, I practiced and reinforced:
   - Screen-reader-only labels
   - Focus and hover states
   - Clear visual error feedback
-
-Example of dynamic error handling:
-
-```js
-formInput.addEventListener("input", () => {
-  clearErrorMessage();
-});
+  

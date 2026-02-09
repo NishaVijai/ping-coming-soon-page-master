@@ -10,7 +10,6 @@ const validateEmail = (email) => {
 };
 
 const showErrorMessage = (message) => {
-  // Remove existing error
   const existingError = document.querySelector(".error-message");
   if (existingError) {
     existingError.remove();
@@ -32,24 +31,19 @@ const clearErrorMessage = () => {
   formInput.classList.remove("error-message-input-border");
 };
 
-// Clear error message on typing
 formInput.addEventListener("input", () => {
   clearErrorMessage();
 });
 
-// Form submission
 formButton.addEventListener("click", (e) => {
   e.preventDefault();
   const email = formInput.value.trim();
 
   if (email === "") {
-    // Empty input
     showErrorMessage(WarnEmptyInputFieldMessage);
   } else if (!validateEmail(email)) {
-    // Invalid email format
     showErrorMessage(InvalidEmailMessage);
   } else {
-    // Valid email
     clearErrorMessage();
     alert("Email is valid!");
     console.log(email);
