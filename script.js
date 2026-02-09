@@ -1,7 +1,8 @@
 const formInput = document.querySelector(".form-input");
 const formButton = document.querySelector(".form-button");
 
-const ShowErrorMessage = "Please provide a valid email address";
+const WarnEmptyInputFieldMessage = "Whoops! It looks like you forgot to add your email";
+const InvalidEmailMessage = "Please provide a valid email address";
 
 const validateEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -9,6 +10,7 @@ const validateEmail = (email) => {
 };
 
 const showErrorMessage = (message) => {
+  // Remove existing error
   const existingError = document.querySelector(".error-message");
   if (existingError) {
     existingError.remove();
@@ -30,20 +32,26 @@ const clearErrorMessage = () => {
   formInput.classList.remove("error-message-input-border");
 };
 
+// Clear error message on typing
 formInput.addEventListener("input", () => {
   clearErrorMessage();
 });
 
+// Form submission
 formButton.addEventListener("click", (e) => {
   e.preventDefault();
-
   const email = formInput.value.trim();
 
-  if (validateEmail(email)) {
+  if (email === "") {
+    // Empty input
+    showErrorMessage(WarnEmptyInputFieldMessage);
+  } else if (!validateEmail(email)) {
+    // Invalid email format
+    showErrorMessage(InvalidEmailMessage);
+  } else {
+    // Valid email
     clearErrorMessage();
     alert("Email is valid!");
     console.log(email);
-  } else {
-    showErrorMessage(ShowErrorMessage);
   }
 });
