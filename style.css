@@ -25,7 +25,7 @@
 
 html {
   color-scheme: light dark;
-  font-size: 100%;
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
 }
 
 body {
@@ -262,7 +262,7 @@ footer p {
 
   .footer-social-icon-container {
     width: 100%;
-    padding-right: 2rem;
+    padding-inline-end: 2rem;
   }
 }
 
@@ -276,6 +276,7 @@ footer p {
     --neutral-gray-color: hsl(0, 0%, 70%);
     --neutral-blue-color: hsl(212, 93%, 74%);
     --color-white: hsla(0, 7%, 3%, 0.719);
+    --color-full-white: hsla(120, 100%, 100%, 1);
     --color-black: hsl(210, 14%, 91%);
   }
 
@@ -285,7 +286,7 @@ footer p {
   }
 
   form input {
-    color: hsl(0, 0%, 100%);
+    color: var(--color-full-white);
     border: 2px solid var(--primary-blue-color);
   }
 
@@ -296,9 +297,12 @@ footer p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-    animation: none !important;
-    scroll-behavior: auto !important;
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    transition-property: none;
+    animation: none;
   }
 }
