@@ -25,6 +25,7 @@
 
 html {
   color-scheme: light dark;
+  font-size: 100%;
 }
 
 body {
@@ -33,7 +34,7 @@ body {
   font-family: "Libre Franklin", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: clamp(16px, 2.5vw, 20px);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-weight: 400;
   line-height: 1.6;
 }
@@ -44,7 +45,7 @@ body {
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   margin: 0 auto;
-  padding: 2rem;
+  padding: clamp(1rem, 2vw, 3rem);
 }
 
 header {
@@ -221,7 +222,7 @@ footer p {
   color: var(--secondary-red-color);
   font-size: 0.9rem;
   font-style: italic;
-  margin-left: var(--gap-size-2rem);
+  margin-inline-start: var(--gap-size-2rem);
 }
 
 .error-message-input-border {
@@ -234,9 +235,9 @@ footer p {
   filter: invert(10%);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .wrapper {
-    max-width: 1440px;
+    max-width: 90rem;
   }
 
   form {
@@ -291,5 +292,13 @@ footer p {
   ::placeholder {
     color: var(--neutral-gray-color);
     opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
   }
 }
