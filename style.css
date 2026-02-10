@@ -232,7 +232,7 @@ footer p {
   color: var(--secondary-red-color);
   font-size: clamp(0.8rem, 1vw, 0.9rem);
   font-style: italic;
-  margin-inline-start: var(--gap-size-2rem);
+  margin-inline-start: clamp(1.5rem, 2vw, 2rem);
 }
 
 .error-message-input-border {
