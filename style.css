@@ -54,7 +54,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: var(--gap-size-2rem);
-  padding: 3rem 1rem 1rem 1rem;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 2vw, 2rem) clamp(1rem, 2vw, 2rem) clamp(1rem, 2vw, 2rem);
   width: 100%;
 }
 
@@ -73,7 +73,7 @@ main form button {
   border-radius: 25px;
   font-size: 1rem;
   font-weight: 600;
-  padding: 15px 30px;
+  padding: 0.938rem 1.875rem;
   cursor: pointer;
   height: 48px;
   width: 100%;
@@ -101,7 +101,7 @@ form input {
   border: 2px solid var(--neutral-gray-color);
   border-radius: 25px;
   font-size: 1rem;
-  padding: 15px 30px;
+  padding: 0.938rem 1.875rem;
   height: 52px;
   width: 100%;
   transition: all 0.3s ease-in-out;
@@ -172,7 +172,7 @@ footer p {
   justify-content: center;
   height: auto;
   width: auto;
-  padding: 3rem 0 0 0;
+  padding: clamp(2rem, 5vw, 4rem) 0 0 0;
 }
 
 .main-image-container img {
