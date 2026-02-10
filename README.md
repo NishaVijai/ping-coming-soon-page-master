@@ -30,7 +30,7 @@ https://nishavijai.github.io/ping-coming-soon-page-master/
 
 ### Screenshot
 
-<img width="3840" height="1960" alt="Frontend Mentor Ping coming soon page" src="https://github.com/user-attachments/assets/7fd2a86e-73cd-4647-945d-66129abd7f60" />
+<img width="3840" height="1960" alt="Frontend Mentor Ping coming soon page" src="https://github.com/user-attachments/assets/e24bc511-7184-4f1d-9046-ebda6790c13f" />
 
 ---
 
